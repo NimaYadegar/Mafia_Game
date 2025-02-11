@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ShufflingActivity">
+
+    <RelativeLayout
+        android:id="@+id/shuffling_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/finger_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="برای دیدن نقش خود، انگشت را\n چند ثانیه روی اسم خود نگهدارید"
+            android:textColor="@color/red_200"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            />
+
+        <ListView
+            android:id="@+id/shuffled_names_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="10dp"
+            android:layout_below="@id/finger_tip_tv"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:fadeScrollbars="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarSize="6dp"
+            android:scrollbarThumbVertical="@color/white"
+            android:verticalScrollbarPosition="left"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/days_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/days_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="روز : 0\nدر رای گیری چه کسی بیرون انداخته می شود؟"
+            android:textColor="@color/red_200"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            />
+
+        <ListView
+            android:id="@+id/chose_names_list_day"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="10dp"
+            android:layout_below="@id/days_tv"
+            android:layout_above="@id/knowing_counter_btn"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:fadeScrollbars="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarSize="6dp"
+            android:scrollbarThumbVertical="@color/white"
+            android:verticalScrollbarPosition="left"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/knowing_counter_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:text=" استعلام های باقی مانده : 0 "
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/round_start_btn"
+            android:backgroundTint="@color/cardview_dark_background"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/night_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/player_called_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=" شروع شب "
+            android:textSize="30sp"
+            android:textColor="@color/red_200"
+            android:background="@drawable/round_start_btn"
+            android:backgroundTint="@color/cardview_dark_background"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nights_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="شب : 0"
+            android:textColor="@color/red_200"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            />
+
+        <ListView
+            android:id="@+id/chose_names_list_night"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="10dp"
+            android:layout_below="@id/nights_tv"
+            android:layout_above="@id/extra_tv"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="invisible"
+            android:fadeScrollbars="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarSize="6dp"
+            android:scrollbarThumbVertical="@color/white"
+            android:verticalScrollbarPosition="left"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/extra_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:text=""
+            android:textSize="20sp"
+            android:textColor="@color/red_200"
+            android:visibility="invisible"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

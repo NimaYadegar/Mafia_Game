@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MafiasActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/next_step"
+            android:fadeScrollbars="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarSize="6dp"
+            android:scrollbarThumbVertical="@color/white"
+            android:verticalScrollbarPosition="left"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/finger_tip_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="برای دیدن مشخصات هر کدام، انگشت را\n چند ثانیه روی تصویر آن نگهدارید"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mafia_img"
+                    android:layout_width="120sp"
+                    android:layout_height="100sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/finger_tip_tv"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/mafia"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/simple_mafia_counter_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تعداد مافیاهای ساده : 0"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/mafia_img"
+                    android:layout_marginRight="10dp"
+
+                    />
+
+
+                <GridLayout
+                    android:id="@+id/grid"
+                    android:layout_width="300dp"
+                    android:layout_height="450dp"
+                    android:layout_below="@+id/simple_mafia_counter_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:columnCount="2"
+                    android:orientation="vertical"
+                    android:rowCount="8">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/god_father_img"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="0"
+                        android:layout_rowWeight="3"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:onClick="checkChange"
+                        app:srcCompat="@drawable/godfather" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/god_father_CB"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="3"
+                        android:layout_rowWeight="1"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:onClick="checkChange"
+                        android:text="گادفارد"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:buttonTint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/marde_khavi_img"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="4"
+                        android:layout_rowWeight="3"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/mardekhavi" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="7"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="(به زودی)"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/bombalot_img"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="4"
+                        android:layout_rowWeight="3"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:onClick="checkChange"
+                        app:srcCompat="@drawable/bombalot" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/bombalot_CB"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="7"
+                        android:layout_rowWeight="1"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:onClick="checkChange"
+                        android:text="بمبلات"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:buttonTint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/sylenser_img"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="0"
+                        android:layout_rowWeight="3"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:onClick="checkChange"
+                        app:srcCompat="@drawable/sylenser" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sylenser_CB"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="3"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:onClick="checkChange"
+                        android:text="سایلنتر"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:buttonTint="@color/white" />
+
+
+                </GridLayout>
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text=" بعدی "
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_toLeftOf="@id/next_step"
+            android:layout_alignTop="@id/next_step"
+            android:onClick="next_page"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/next_step"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@android:drawable/ic_menu_send"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:onClick="next_page"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="قبلی ←"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:onClick="prev_step"
+            />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".MafiasActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/next_step"
+                android:fadeScrollbars="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarSize="6dp"
+                android:scrollbarThumbVertical="@color/white"
+                android:verticalScrollbarPosition="left"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/finger_tip_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="برای دیدن مشخصات هر کدام، انگشت را\n چند ثانیه روی تصویر آن نگهدارید"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/mafia_img"
+                        android:layout_width="120sp"
+                        android:layout_height="100sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/finger_tip_tv"
+                        android:layout_marginTop="20dp"
+                        app:srcCompat="@drawable/mafia"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/simple_mafia_counter_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="تعداد مافیاهای ساده : 0"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/mafia_img"
+                        android:layout_marginRight="10dp"
+
+                        />
+
+
+                    <GridLayout
+                        android:id="@+id/grid"
+                        android:layout_width="300dp"
+                        android:layout_height="450dp"
+                        android:layout_below="@+id/simple_mafia_counter_tv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:columnCount="2"
+                        android:orientation="vertical"
+                        android:rowCount="8">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/god_father_img"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_row="0"
+                            android:layout_rowWeight="3"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:onClick="checkChange"
+                            app:srcCompat="@drawable/godfather" />
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/god_father_CB"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_row="3"
+                            android:layout_rowWeight="1"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:onClick="checkChange"
+                            android:text="گادفارد"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:buttonTint="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/marde_khavi_img"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_row="4"
+                            android:layout_rowWeight="3"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:onClick="checkChange"
+                            app:srcCompat="@drawable/mardekhavi" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_row="7"
+                            android:layout_rowWeight="1"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="(به زودی)"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/bombalot_img"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_row="4"
+                            android:layout_rowWeight="3"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:onClick="checkChange"
+                            app:srcCompat="@drawable/bombalot" />
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/bombalot_CB"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_row="7"
+                            android:layout_rowWeight="1"
+                            android:layout_column="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:onClick="checkChange"
+                            android:text="بمبلات"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:buttonTint="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/sylenser_img"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_row="0"
+                            android:layout_rowWeight="3"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="5dp"
+                            android:onClick="checkChange"
+                            app:srcCompat="@drawable/sylenser" />
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/sylenser_CB"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_row="3"
+                            android:layout_rowWeight="1"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:onClick="checkChange"
+                            android:text="سایلنتر"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:buttonTint="@color/white" />
+
+
+                    </GridLayout>
+
+                </RelativeLayout>
+
+
+            </ScrollView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text=" بعدی "
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_toLeftOf="@id/next_step"
+                android:layout_alignTop="@id/next_step"
+                android:onClick="next_page"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/next_step"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@android:drawable/ic_menu_send"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="قبلی ←"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:onClick="prev_step"
+                />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    -->

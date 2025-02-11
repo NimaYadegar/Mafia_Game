@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/Nima_Yadegar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/start_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/round1"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/start_btn"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text=" شروع "
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_start_btn"
+            android:backgroundTint="@color/green"
+            android:layout_above="@id/guide"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:onClick="start"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/guide"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text=" راهنما "
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/round_start_btn"
+            android:backgroundTint="@color/teal_700"
+            android:gravity="center"
+            android:onClick="help"
+            />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

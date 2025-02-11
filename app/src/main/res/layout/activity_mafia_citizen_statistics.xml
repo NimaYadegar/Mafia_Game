@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MafiaCitizenStatisticsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="برای دیدن مشخصات هر کدام،\n انگشت را چند ثانیه روی آن نگهدارید"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mafia_counter_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تعداد مافیاها : 0"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_above="@+id/citizen_counter_tv"
+            android:layout_marginBottom="20dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/citizen_counter_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تعداد شهروندان : 0"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/joker_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" جوکر "
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/citizen_counter_tv"
+            android:layout_marginTop="20dp"
+            android:buttonTint="@color/white"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text=" بعدی "
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_toLeftOf="@id/next_step"
+            android:layout_alignTop="@id/next_step"
+            android:onClick="next_page"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/next_step"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@android:drawable/ic_menu_send"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:onClick="next_page"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="قبلی ←"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:onClick="prev_step"
+            />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

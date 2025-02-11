@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="راهنمای بازی" />
+    <item
+        android:id="@+id/app_bar_switch"
+        android:title="موسیقی زمینه"
+        app:actionViewClass="androidx.appcompat.widget.SwitchCompat"
+        android:checkable="true"
+        android:checked="false"/>
+    <item android:title="نقش ها" >
+
+        <menu>
+
+            <item android:title="مافیا ها" >
+
+                <menu>
+
+                    <item android:title="گادفادر" />
+                    <item android:title="سایلنتر" />
+                    <item android:title="بمبلات" />
+                    <item android:title="مافیا" />
+
+                </menu>
+
+            </item>
+            <item android:title="شهروندان" >
+
+                <menu>
+
+                    <item android:title="دکتر" />
+                    <item android:title="کاراگاه" />
+                    <item android:title="اسنایپر" />
+                    <item android:title="روئینتن" />
+                    <item android:title="ساقی" />
+                    <item android:title="کشیش" />
+                    <item android:title="شهروند" />
+
+                </menu>
+
+            </item>
+            <item android:title="جوکر" />
+
+        </menu>
+
+    </item>
+
+</menu>
